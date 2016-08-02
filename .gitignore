@@ -49,6 +49,9 @@ bin
 # python executables
 *.pyc
 
+# IDE files
+.project
+
 # temp files
 .*.*.swp
 .*.swp

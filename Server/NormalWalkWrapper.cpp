@@ -95,7 +95,7 @@ int NormalWalkerWrapper::normalWalking(aris::dynamic::Model &model, const aris::
         case GAIT_CMD::SPEEDUP:
             {
                 auto currentParam = walker.GetCurrentParameter();
-                currentParam.velocity += 0.1;
+                currentParam.velocity += 0.2;
                 walker.AdjustGaitParam(timeNow, currentParam);
                 rt_printf("GAIT CMD: SPEED UP \n");
             }
@@ -103,7 +103,7 @@ int NormalWalkerWrapper::normalWalking(aris::dynamic::Model &model, const aris::
         case GAIT_CMD::SPEEDDOWN:
             {
                 auto currentParam = walker.GetCurrentParameter();
-                currentParam.velocity -= 0.1;
+                currentParam.velocity -= 0.2;
                 walker.AdjustGaitParam(timeNow, currentParam);
                 rt_printf("GAIT CMD: SPEED DOWN\n");
             }

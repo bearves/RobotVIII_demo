@@ -19,16 +19,16 @@ int NormalWalker::Initialize()
     m_currentParam.velocity = 0;
     m_startTimeLastStep = 0;
 
-    m_standHeight = 0.82;
+    m_standHeight = 0.85;
     m_initBodyPos.setZero();
     m_initBodyOri.setZero();
 
-    m_initFootTipPos[0] << -0.3, -m_standHeight, -0.65;
-    m_initFootTipPos[1] <<-0.45, -m_standHeight, -0.00;
-    m_initFootTipPos[2] << -0.3, -m_standHeight,  0.65;
-    m_initFootTipPos[3] <<  0.3, -m_standHeight, -0.65;
-    m_initFootTipPos[4] << 0.45, -m_standHeight, -0.00;
-    m_initFootTipPos[5] <<  0.3, -m_standHeight,  0.65;
+    m_initFootTipPos[0] << -0.24, -m_standHeight, -0.65;
+    m_initFootTipPos[1] <<-0.48, -m_standHeight, -0.00;
+    m_initFootTipPos[2] << -0.24, -m_standHeight,  0.65;
+    m_initFootTipPos[3] <<  0.24, -m_standHeight, -0.65;
+    m_initFootTipPos[4] << 0.48, -m_standHeight, -0.00;
+    m_initFootTipPos[5] <<  0.24, -m_standHeight,  0.65;
 
     // positions of the leg group 1 and 2
     m_legGroupPos[0].setZero();
