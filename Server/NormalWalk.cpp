@@ -19,7 +19,8 @@ int NormalWalker::Initialize()
     m_currentParam.velocity = 0;
     m_startTimeLastStep = 0;
 
-    m_standHeight = 0.82;
+    m_standHeight = 0.85;
+    m_compHeight = 0.015;
     m_initBodyPos.setZero();
     m_initBodyOri.setZero();
 
@@ -261,6 +262,10 @@ int NormalWalker::HipTrjGenerator(
     // -Z axis is the forward direction
     currentPosGSP(2) = timeFromLastHalfStep * currentBodyVel - halfPeriod * currentBodyVel / 2;
     currentPosGSP(1) = 0;
+
+    // Add mapping on both leg trj to make these legs' touchdown point a little higher
+    currentPosGSW(1) += LandingCompensation(-currentPosGSW(2), halfPeriod * currentBodyVel, m_compHeight);
+    currentPosGSP(1) += LandingCompensation(-currentPosGSP(2), halfPeriod * currentBodyVel, m_compHeight);
     return 0;
 }
 
@@ -270,6 +275,16 @@ int NormalWalker::GradualAdjust(double timeRatio)
     m_currentParam.velocity = m_originParam.velocity * (1 - adjRatio) + m_desireParam.velocity * adjRatio;
     m_currentParam.stepHeight = m_originParam.stepHeight * (1 - adjRatio) + m_desireParam.stepHeight * adjRatio;
     return 0;
+}
+
+double NormalWalker::LandingCompensation(double x, double stepLengthHip, double compHeight)
+{
+    if (x < -stepLengthHip/2.0)
+        return 0;
+    else if (x < stepLengthHip/2.0)
+        return compHeight * (1 - cos((x + stepLengthHip/2.0)/stepLengthHip * M_PI)) / 2.0;
+    else
+        return compHeight;
 }
 
 }
