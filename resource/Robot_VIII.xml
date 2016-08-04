@@ -533,21 +533,20 @@
                     <beta abbreviation="b" type="double" default="0"/>
                 </wk_param>
             </wk>
-            <mr>
-   <nw>
-       <nw_param type="unique">
-           <!-- Initialize the gait planner -->
-           <i abbreviation="i" />
-           <!-- Begin gait planning -->
-           <b abbreviation="b" />
-           <!-- End gait planning -->
-           <e abbreviation="e" />
-           <!-- Speed up-->
-           <u abbreviation="u" />
-           <!-- Speed down-->
-           <d abbreviation="d" />
-       </nw_param>
-   </nw>
+	    <nw>
+	    <nw_param type="unique">
+	    <!-- Initialize the gait planner -->
+	    <i abbreviation="i" />
+	    <!-- Begin gait planning -->
+	    <b abbreviation="b" />
+	    <!-- End gait planning -->
+	    <e abbreviation="e" />
+	    <!-- Speed up-->
+	    <u abbreviation="u" />
+	    <!-- Speed down-->
+	    <d abbreviation="d" />
+	    </nw_param>
+	    </nw>
 			<cmb default="cmb_param">
 				<cmb_param type="group">
 					<u abbreviation="u" type="double" default="0"/>
