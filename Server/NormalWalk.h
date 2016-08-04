@@ -56,6 +56,7 @@ namespace NormalWalk
             int VirtualLegGaitGenerator(double timeNow);
             int CalculateFootTipPositions();
             int InverseKinematics();
+            double LandingCompensation(double x, double stepLengthHip, double compHeight);
 
             // Generate the trajectory pattern in the Cartesian space, w.r.t. ground
             int TrjPatternGenerator(
@@ -100,6 +101,7 @@ namespace NormalWalk
 
             // init body position w.r.t. global coords
             double m_standHeight;
+            double m_compHeight;
             Eigen::Matrix3d m_initBodyPos;
             Eigen::Matrix3d m_initBodyOri;
 
