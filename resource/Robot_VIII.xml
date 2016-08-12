@@ -510,6 +510,7 @@
                 <leg abbreviation="l" type="intArray" default="0"/>
             </hm>
             <fake_home/>
+            <zo/>
             <rc default="rc_param">
                 <rc_param type="group">
                     <leg_param type="unique" default="all">
