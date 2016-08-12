@@ -110,7 +110,7 @@ include_directories(${ALL_INCL_DIR})
 link_directories(${ALL_LINK_DIR})
 
 ################################### build server ####################################
-set(SOURCE_FILES main.cpp NormalWalkWrapper.cpp NormalWalk.cpp)
+set(SOURCE_FILES main.cpp NormalWalkWrapper.cpp NormalWalk.cpp ClearForce.cpp)
 PREPEND(FULL_SRC "Server" ${SOURCE_FILES})
 add_executable(Server ${FULL_SRC})
 target_link_libraries(Server ${ALL_LINK_LIB})
@@ -121,6 +121,7 @@ target_link_libraries(rbt ${ALL_LINK_LIB})
 
 # additional tests
 add_executable(TestGaitGeneration Server/TestGaitMain.cpp Server/NormalWalk.cpp)
+add_executable(LogReader Server/LogReader.cpp)
 
 ################################### install ####################################
 if(UNIX)
