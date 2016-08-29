@@ -10,3 +10,7 @@ build
 
 #~ files
 *~
+
+*.py
+*.pyc
+
