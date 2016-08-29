@@ -3,13 +3,9 @@
 #include <iomanip> 
 #include <bitset>
 #include <cstring>
-#include <map>
 #include <string>
 
 using namespace std;
-
-#include <aris.h>
-#include <Robot_Type_I.h>
 
 #ifdef WIN32
 #define rt_printf printf
@@ -53,6 +49,7 @@ int main(int argc, char *argv[])
     rs.addCmd("ds", Robots::basicParse, nullptr);
     rs.addCmd("hm", Robots::basicParse, nullptr);
     rs.addCmd("zo", Robots::basicParse, nullptr);
+    rs.addCmd("hmsw", Robots::basicParse, nullptr);
     rs.addCmd("rc", Robots::recoverParse, Robots::recoverGait);
     rs.addCmd("wk", Robots::walkParse, Robots::walkGait);
     rs.addCmd("ro", Robots::resetOriginParse, Robots::resetOriginGait);

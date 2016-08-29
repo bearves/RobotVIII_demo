@@ -55,3 +55,16 @@ bin
 # temp files
 .*.*.swp
 .*.swp
+#qt files
+*.config
+*.creator
+*.files
+*.includes
+*.creator.user
+
+
+#~ files
+*~
+
+*.py
+

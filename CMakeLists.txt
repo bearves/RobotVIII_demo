@@ -99,7 +99,7 @@ set(ARIS_LINK_DIR "C:/Aris/lib")
 set(ARIS_LINK_LIB aris_server aris_sensor aris_dynamic aris_control aris_core)
 set(ROBOTS_INCL_DIR "C:/Robots/include")
 set(ROBOTS_LINK_DIR "C:/Robots/lib")
-set(ROBOTS_LINK_LIB Robot_Type_I Robot_Type_II Robot_Base)
+set(ROBOTS_LINK_LIB Robot_Type_I Robot_Type_II Robot_Type_III Robot_Base)
 
 set(ALL_INCL_DIR ${ROBOTS_INCL_DIR} ${ARIS_INCL_DIR} ${XSENS_INCL_DIR} ${ETHERLAB_INCL_DIR} ${XENOMAI_INCL_DIR} ${GENERAL_INCL_DIR})
 set(ALL_LINK_DIR ${ROBOTS_LINK_DIR} ${ARIS_LINK_DIR} ${XSENS_LINK_DIR} )
@@ -108,6 +108,7 @@ endif(WIN32)
 
 include_directories(${ALL_INCL_DIR})
 link_directories(${ALL_LINK_DIR})
+
 
 ################################### build server ####################################
 set(SOURCE_FILES main.cpp NormalWalkWrapper.cpp NormalWalk.cpp)

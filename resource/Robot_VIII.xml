@@ -20,7 +20,7 @@
             <S2jpe type="matrix">{ 0, 0,      0,     0, -PI / 2, 0 }</S2jpe>
             <S3ipe type="matrix">{ 0, 0.059, -0.034, 0, -PI / 2, 0 }</S3ipe>
             <S3jpe type="matrix">{ 0, 0,      0,     0, -PI / 2, 0 }</S3jpe>
-            <Sfipe type="matrix">{ 0.065, 0, 0, 0, 0, 0 }</Sfipe>
+            <Sfipe type="matrix">{ 0.114, -0.024, 0, 0, 0, 0 }</Sfipe>
             <Sfjpe type="matrix">{ 0,   0, 0, 0, 0, 0 }</Sfjpe>
             <LFpe type="matrix">{-0.05433 , 0 , -0.3300 + 0.0047, PI/2,  PI* 5/6,   -PI/2-PI*75/180}</LFpe>
             <LMpe type="matrix">{-0.10241 , 0 ,  0,         PI/2,  PI* 6/6,   -PI/2-PI*75/180}</LMpe>
@@ -509,6 +509,14 @@
                 <physical_motor abbreviation="p" type="intArray" default="0"/>
                 <leg abbreviation="l" type="intArray" default="0"/>
             </hm>
+            <hmsw default="all">
+                <all abbreviation="a"/>
+                <first abbreviation="f"/>
+                <second abbreviation="s"/>
+                <motor abbreviation="m" type="intArray" default="0"/>
+                <physical_motor abbreviation="p" type="intArray" default="0"/>
+                <leg abbreviation="l" type="intArray" default="0"/>
+            </hmsw>
             <fake_home/>
             <zo/>
             <rc default="rc_param">
@@ -668,6 +676,7 @@
                         <TorqueUnit index="0x2040" subindex="0x32" type="int32" write="false"/>
                     </SDO>
                 </AtiForceSensor>
+<<<<<<< HEAD
 		<EK1100 product_code="0x044c2c52" vender_id="0x00000002" alias="0" >
 		    <PDO></PDO>
 		    <SDO></SDO>
@@ -707,13 +716,58 @@
 		<Junction3 type="EK1122" />
             	<ForceSensor5 type="AtiForceSensor" abs_id="5"/>
             	<ForceSensor6 type="AtiForceSensor" abs_id="1"/>
+=======
+                <EK1100 product_code="0x044c2c52" vender_id="0x00000002" alias="0" >
+                    <PDO></PDO>
+                    <SDO></SDO>
+                </EK1100>
+                <EK1122 product_code="0x04622c52" vender_id="0x00000002" alias="0" >
+                    <PDO></PDO>
+                    <SDO></SDO>
+                </EK1122>
+            </SlaveType>
+            <Slave>
+                <Motion1 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="1"/>
+                <Motion2 type="ElmoSoloWhistle"  min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="0"/>
+                <Motion3 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id=" 2"/>
+                <Motion4 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id=" 5"/>
+                <Motion5 type="ElmoSoloWhistle"  min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="3"/>
+                <Motion6 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id=" 4"/>
+                <Motion7 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id=" 7"/>
+                <Motion8 type="ElmoSoloWhistle"  min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="6"/>
+                <Motion9 type="ElmoSoloWhistle"  min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id=" 8"/>
+                <Motion10 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="16"/>
+                <Motion11 type="ElmoSoloWhistle" min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="15"/>
+                <Motion12 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="17"/>
+                <Motion13 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="14"/>
+                <Motion14 type="ElmoSoloWhistle" min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="12"/>
+                <Motion15 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="13"/>
+                <Motion16 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="10"/>
+                <Motion17 type="ElmoSoloWhistle" min_pos="0.669" max_pos="1.080" max_vel="0.9481" home_pos="0.669" input2count="9216000" abs_id="9"/>
+                <Motion18 type="ElmoSoloWhistle" min_pos="0.690" max_pos="1.100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="11"/>
+                <Motion19 type="ElmoSoloWhistle" min_pos="-100" max_pos="100" max_vel="0.9481" home_pos="0.69" input2count="9216000" abs_id="18"/>
+                <SlaveStation1 type="EK1100" />
+                <Junction1 type="EK1122" />
+                <ForceSensor1 type="AtiForceSensor" abs_id="3"/>
+                <ForceSensor2 type="AtiForceSensor" abs_id="2"/>
+                <Junction2 type="EK1122" />
+                <ForceSensor3 type="AtiForceSensor" abs_id="4"/>
+                <ForceSensor4 type="AtiForceSensor" abs_id="0"/>
+                <Junction3 type="EK1122" />
+                <ForceSensor5 type="AtiForceSensor" abs_id="5"/>
+                <ForceSensor6 type="AtiForceSensor" abs_id="1"/>
+>>>>>>> DIY_homing
             </Slave>
         </EtherCat>
     </Controller>
     <Sensors>
-        <IMU active="false" type="xsens_imu" portLinux="/dev/ttyUSB0" baudRate="921600" sampleRate="400" PeImuGround2BodyGound="{0,0,0,0,-PI/2,PI}" PeImu2Body="{0,0,0,0,PI/2,0}"/>
+        <IMU active="true" type="xsens_imu" portLinux="/dev/ttyUSB0" baudRate="921600" sampleRate="400" PeImuGround2BodyGound="{0,0,0,PI,PI/2,3*PI/2}" PeImu2Body="{0,0,0,0,PI/2,PI/2}"/>
         <Vision type="kinect2.0"/>
     </Sensors>
+<<<<<<< HEAD
     <UDP remote_ip="192.168.1.101" remote_port="6661" local_port="6660"/>
+=======
+    <UDP remote_ip="192.168.1.103" remote_port="6661" local_port="6660"/>
+>>>>>>> DIY_homing
 </RobotVIII>
 
